@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Data Integration and Evaluation Pipeline | Alekhya Vellanki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">AV</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#work">Back to Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="project-detail">
+            <div class="container">
+                <div class="project-header-content" style="padding: 4rem 0 2rem;">
+                    <a href="index.html" class="back-link"
+                        style="display: inline-block; margin-bottom: 1rem; color: var(--secondary-text); font-size: 0.9rem;">
+                        &larr; Back to Home
+                    </a>
+
+                    <h1 class="project-title">Clinical Data Integration and Evaluation Pipeline</h1>
+                    <p class="project-subtitle"
+                        style="font-size: 1.5rem; color: var(--secondary-text); margin-bottom: 2rem;">
+                        UC Davis Health – Clinical NLP
+                    </p>
+
+                    <div class="project-meta"
+                        style="display: flex; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2rem;">
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Role</h4>
+                            <p>Clinical Data Analyst</p>
+                        </div>
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Tools</h4>
+                            <p>SQL, Python, Power BI, cTAKES, FHIR</p>
+                        </div>
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Timeline</h4>
+                            <p>2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-hero-image" style="margin-bottom: 4rem;">
+                    <img src="project1.png" alt="Clinical Data Pipeline Visualization"
+                        style="width: 100%; border-radius: 8px;">
+                </div>
+
+                <div class="project-content" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Overview</h2>
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        This project focused on evaluating the cTAKES clinical NLP pipeline for identifying
+                        COVID-19 related symptoms from de-identified Electronic Health Record notes. The work brought
+                        together cloud-stored clinical documents, FHIR-based DocumentReference metadata, structured
+                        cTAKES outputs, human-annotated reference data, SQL integration, Python-based evaluation, and
+                        Power BI visualization to create an end-to-end framework for assessing symptom extraction
+                        quality.
+                    </p>
+
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Implementation</h2>
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        The pipeline began with the preparation and cleaning of cTAKES output files, which contained
+                        symptom extractions stored as JSON objects. These files were standardized to ensure consistent
+                        formatting across all entries. FHIR DocumentReference files were then parsed to map document
+                        identifiers to their source notes stored securely in cloud storage.
+                    </p>
+
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        A relational SQL master table was constructed to consolidate all relevant components. Each
+                        row
+                        linked a symptom extraction to its encounter, subject, document identifier, and original JSON
+                        payload. JSON fields were unpacked into structured SQL columns that captured symptom text,
+                        polarity, and coded clinical concepts. This architecture enabled efficient querying and
+                        filtering of extraction attributes.
+                    </p>
+
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        Human annotation files were incorporated into the workflow to serve as reference labels for
+                        validation. Using Python, batches of source notes were retrieved from S3, aligned with the
+                        annotation data, and matched to the corresponding cTAKES extractions through the SQL mapping
+                        table. A batch evaluation process classified each extraction as correct, incorrect, or missed,
+                        allowing the workflow to scale without requiring redesign.
+                    </p>
+
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        After evaluation, the structured SQL tables were connected to Power BI to support interactive
+                        visualization. This environment enabled detailed exploration of symptom trends, extraction
+                        patterns, and data quality signals across the dataset.
+                    </p>
+
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Workflow Visualization</h2>
+                    <div class="project-gallery" style="margin-bottom: 4rem;">
+                        <img src="project1_workflow.png" alt="Workflow Implementation Diagram"
+                            style="width: 100%; max-width: 600px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--secondary-text);">Figure 1:
+                            Detailed view of the clinical data extraction workflow.</p>
+                    </div>
+
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Results</h2>
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        The completed pipeline produced an integrated and analysis-ready dataset that unified NLP
+                        outputs, document metadata, and annotation references. The evaluation stage clarified the
+                        behavior of cTAKES by distinguishing correct detections, missed findings, and inconsistent
+                        predictions. Power BI dashboards provided visual insights into frequently identified symptoms,
+                        encounter-level trends, and overall data consistency, enabling more efficient review and
+                        assessment of clinical NLP performance.
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alekhya Vellanki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

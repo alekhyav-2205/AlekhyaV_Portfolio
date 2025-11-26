@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiaHealth Database Design | Alekhya Vellanki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">AV</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#work">Back to Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="project-detail">
+            <div class="container">
+                <div class="project-header-content" style="padding: 4rem 0 2rem;">
+                    <a href="index.html" class="back-link"
+                        style="display: inline-block; margin-bottom: 1rem; color: var(--secondary-text); font-size: 0.9rem;">&larr;
+                        Back to Home</a>
+
+                    <h1 class="project-title">DiaHealth: Diabetes Care Relational Database</h1>
+                    <p class="project-subtitle"
+                        style="font-size: 1.5rem; color: var(--secondary-text); margin-bottom: 2rem;">Database
+                        Architecture</p>
+
+                    <div class="project-meta"
+                        style="display: flex; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2rem;">
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Role</h4>
+                            <p>Database Architect</p>
+                        </div>
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Tech Stack</h4>
+                            <p>SQL, PostgreSQL, FHIR Modeling</p>
+                        </div>
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Domain</h4>
+                            <p>Chronic Disease Management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-hero-image" style="margin-bottom: 4rem;">
+                    <img src="project3.png" alt="Diabetes Database Architecture"
+                        style="width: 100%; border-radius: 8px;">
+                </div>
+
+                <div class="project-content" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+
+                    <!-- OVERVIEW -->
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Overview</h2>
+                    <p style="margin-bottom: 1.5rem; color: var(--secondary-text);">
+                        DiaHealth is a clinical data architecture designed to support a diabetes health-coaching program
+                        by integrating EHR clinical indicators with coaching-application data. The project structures
+                        patient enrollment, clinical observations, lifestyle interventions, and six-month outcome
+                        assessments.
+                    </p>
+                    <p style="margin-bottom: 1.5rem; color: var(--secondary-text);">
+                        The schema follows FHIR-aligned patterns, modeling entities such as Patient, Observation,
+                        Encounter, Practitioner, and CarePlan. Data is organized into a longitudinal structure for
+                        analyzing changes in HbA1c, lipid profile, BMI, and blood pressure across intervention stages.
+                    </p>
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        The design incorporates HIPAA-aligned principles, separating PHI from analytical identifiers and
+                        defining clear access assumptions for clinical and analytical roles.
+                    </p>
+
+                    <!-- SCHEMA DESIGN & ARCHITECTURE -->
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Schema Design & Architecture</h2>
+
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">FHIR-Aligned Schema Design</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--secondary-text);">
+                        <li>Structured core clinical entities using FHIR resource conventions for consistency and
+                            interoperability with Epic data exports.</li>
+                        <li>Normalized the data model to third normal form (3NF) to enable clean integration and
+                            analytical querying.</li>
+                        <li>Defined modular tables for clinical indicators, care plans, nutritional guidance, and
+                            coaching interactions.</li>
+                    </ul>
+
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Database Schema</h2>
+                    <div class="project-gallery" style="margin-bottom: 4rem;">
+                        <img src="project3_schema.png" alt="DiaHealth Database Schema Diagram"
+                            style="width: 100%; max-width: 800px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--secondary-text);">Figure 1:
+                            Entity-Relationship Diagram (ERD) of the DiaHealth database.</p>
+                    </div>
+
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">Data Transformation & Modeling Framework</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--secondary-text);">
+                        <li>Designed a layered data-modeling structure organizing inputs into staging, refined clinical
+                            indicators, and longitudinal analytics tables.</li>
+                        <li>Developed transformation logic to standardize raw EHR extracts and coaching-app data into
+                            consistent representations of HbA1c, BMI, lipids, and blood pressure.</li>
+                        <li>Emphasized modularity, traceability, documentation, and structured transformation steps for
+                            clarity and reproducibility.</li>
+                        <li>Produced analysis-ready longitudinal tables reflecting each patient's clinical timeline
+                            across pre- and post-intervention stages.</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">Integration Architecture</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--secondary-text);">
+                        <li>Modeled multi-source ingestion from Epic (FHIR-structured extracts) and the coaching
+                            application into a unified relational framework.</li>
+                        <li>Outlined cloud-compatible ETL logic (Glue-style transformations) before loading into
+                            PostgreSQL.</li>
+                        <li>Applied HIPAA-aligned design considerations, including identifier separation, minimal PHI
+                            exposure, and role-appropriate access patterns.</li>
+                        <li>Enabled clinical and coaching data to converge cleanly into a consolidated schema.</li>
+                    </ul>
+
+                    <!-- RESULTS -->
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Results</h2>
+
+                    <ol style="padding-left: 1.5rem; margin-bottom: 4rem; color: var(--secondary-text);">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Delivered an implementation-ready clinical data architecture:</strong>
+                            A complete model that integrates EHR and coaching-app data into a unified, structured
+                            ecosystem.
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Established an interoperable, FHIR-aligned schema:</strong>
+                            Ensures consistency with Epic and supports future expansion into digital-health ecosystems.
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Created longitudinal, analysis-ready data structures:</strong>
+                            Designed tables that capture pre/post clinical indicators for evaluating program outcomes
+                            and patient trajectories.
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Aligned schema with real clinical workflows:</strong>
+                            Modeled interactions among nurse practitioners, health coaches, informaticists, and analysts
+                            to ensure operational feasibility.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alekhya Vellanki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

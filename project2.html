@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feasibility of Implementing a Large Language Model Pipeline for Rapid Prototyping of Clinical Text Extraction
+        | Alekhya Vellanki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">AV</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#work">Back to Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="project-detail">
+            <div class="container">
+                <div class="project-header-content" style="padding: 4rem 0 2rem;">
+                    <a href="index.html" class="back-link"
+                        style="display: inline-block; margin-bottom: 1rem; color: var(--secondary-text); font-size: 0.9rem;">&larr;
+                        Back to Home</a>
+
+                    <!-- UPDATED TITLE -->
+                    <h1 class="project-title">
+                        Feasibility of Implementing a Large Language Model Pipeline for Rapid Prototyping of Clinical
+                        Text Extraction
+                    </h1>
+
+                    <!-- UPDATED SUBTITLE -->
+                    <p class="project-subtitle"
+                        style="font-size: 1.5rem; color: var(--secondary-text); margin-bottom: 2rem;">
+                        Graduate Research · Clinical NLP · Model Deployment
+                    </p>
+
+                    <div class="project-meta"
+                        style="display: flex; gap: 2rem; margin-bottom: 3rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2rem;">
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Role</h4>
+                            <p>NLP Researcher</p>
+                        </div>
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Tech Stack</h4>
+                            <p>Python, TinyLLaMA, llama.cpp, Flask</p>
+                        </div>
+                        <div>
+                            <h4
+                                style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary-text); margin-bottom: 0.5rem;">
+                                Focus</h4>
+                            <p>Model Evaluation & Deployment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-hero-image" style="margin-bottom: 4rem;">
+                    <img src="project2.png" alt="LLM NLP Pipeline Visualization"
+                        style="width: 100%; border-radius: 8px;">
+                </div>
+
+                <div class="project-content" style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+
+                    <!-- ---------------- OVERVIEW ---------------- -->
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Overview</h2>
+                    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+                        This project focuses on implementing and evaluating a CPU-based NLP workflow using
+                        quantized large language models. The goal was to determine whether clinical text extraction
+                        frameworks,can operate effectively in resource-limited environments such as academic labs or
+                        non-enterprise healthcare settings.
+                        <br><br>
+                        The work involved setting up the pipeline locally, integrating quantized LLMs, running
+                        structured
+                        extraction tasks on de-identified clinical notes. The outcome provides a realistic feasibility
+                        assessment for early-stage
+                        LLM
+                        adoption in clinical research workflows with low-compute power.
+                    </p>
+
+                    <!-- ---------------- IMPLEMENTATION ---------------- -->
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Implementation</h2>
+
+                    <h3 style="margin-bottom: 0.5rem;">1. Pipeline Setup & Configuration</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary-text);">
+                        <li>Implemented the LLM-AXL information extraction pipeline locally on an Apple M2 CPU system.
+                        </li>
+                        <li>Installed dependencies, compiled the llama.cpp backend, configured the Flask interface, and
+                            connected it to the quantized model server.</li>
+                        <li>Integrated TinyLLaMA-1.1B GGUF models (Q2, Q4, Q6) by updating configuration files for model
+                            path, context size, and inference parameters.</li>
+                        <li>Prepared and formatted clinical text datasets for ingestion through the preprocessing
+                            module.</li>
+                    </ul>
+
+                    <h3 style="margin-bottom: 0.5rem;">2. Model Execution & Testing Workflow</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; color: var(--secondary-text);">
+                        <li>Ran extraction tasks using structured JSON prompts targeting specific clinical fields.</li>
+                        <li>Followed an iterative evaluation workflow, beginning with small data subsets and scaling to
+                            larger batches to observe runtime and stability.</li>
+                        <li>Adjusted inference settings (temperature, max_tokens, batch size) and compared behavior
+                            across quantization levels.</li>
+                    </ul>
+
+                    <h3 style="margin-bottom: 0.5rem;">3. System Optimization</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem; color: var(--secondary-text);">
+                        <li>Identified the pipeline’s per-row PDF generation as a major performance bottleneck.</li>
+                        <li>Disabled PDF generation, which reduced latency and improved stability on larger datasets.
+                        </li>
+                    </ul>
+
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Pipeline Workflow</h2>
+                    <div class="project-gallery" style="margin-bottom: 4rem;">
+                        <img src="project2_workflow.png" alt="LLM Pipeline Workflow Diagram"
+                            style="width: 100%; max-width: 800px; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--secondary-text);">Figure 1:
+                            Step-by-step workflow of the local LLM implementation.</p>
+                    </div>
+
+                    <!-- ---------------- RESULTS ---------------- -->
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Results</h2>
+
+                    <h3>1. Comprehensive Implementation Roadmap with Use-Cases</h3>
+                    <p style="margin-bottom: 1rem; color: var(--secondary-text);">
+                        Produced a complete, step-by-step roadmap that documents environment setup, model configuration,
+                        pipeline execution, quantized model selection, and troubleshooting. This enables future
+                        users, including non-technical clinical researchers, to deploy the LLM-AXL pipeline
+                        independently in CPU-only
+                        settings.
+                    </p>
+
+                    <h3>2. Successful CPU-Only Deployment</h3>
+                    <p style="margin-bottom: 1rem; color: var(--secondary-text);">
+                        The pipeline executed fully on CPU-only hardware, confirming that quantized LLMs can support
+                        early-stage clinical text extraction without requiring GPUs or cloud compute.
+                    </p>
+
+                    <h3>3. Quantized Model Benchmarking</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; color: var(--secondary-text);">
+                        <li><strong>Q2:</strong> Fastest but least consistent outputs</li>
+                        <li><strong>Q4:</strong> Best balance of runtime and stability</li>
+                        <li><strong>Q6:</strong> Most detailed but slowest</li>
+                    </ul>
+                    <p style="margin-bottom: 1rem; color: var(--secondary-text);">
+                        Q4 emerged as the most practical choice for CPU-only environments.
+                    </p>
+
+                    <h3>4. Improved Runtime Through Optimization</h3>
+                    <p style="margin-bottom: 4rem; color: var(--secondary-text);">
+                        Removing per-row PDF generation reduced latency, prevented failures on larger datasets, and
+                        enabled more
+                        reliable, scalable CPU execution.
+                    </p>
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alekhya Vellanki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

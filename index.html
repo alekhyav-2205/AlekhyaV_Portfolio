@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alekhya Vellanki | Health Informatics Portfolio</title>
+    <meta name="description"
+        content="Portfolio showcasing health informatics, data analytics, LLM implementation and clinical data projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Alekhya Vellanki</a>
+                <ul class="nav-links">
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transforming clinical workflows through Data and Informatics.</h1>
+                    <p>Hello ! I am Alekhya Vellanki, a Health Informatics graduate student at UC Davis with a
+                        background in dentistry clinical workflows, and data analytics.</p>
+                    <a href="#work" class="cta-button">View My Work</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="work" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Selected Work</h2>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+                    <a href="project1.html" class="project-card-link">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="project1.png" alt="UC Davis Clinical Data Pipeline" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3>Data Integration and Validation Pipeline – UC Davis Digital CoLab</h3>
+                                <p>Designed a secure SQL pipeline to process 100K+ unstructured Epic EHR notes,
+                                    improving processing performance by 25%. Built precision-recall validation
+                                    workflows and PowerBI dashboards that reduced reporting time by 50%.</p>
+                                <div class="project-tags">
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Power BI</span>
+                                    <span class="tag">Clinical Data</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- PROJECT 2: LLM IMPLEMENTATION -->
+                    <a href="project2.html" class="project-card-link">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="project2.png" alt="LLM Clinical NLP Pipeline" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3>Feasibility of Implementing a Large Language Model Pipeline for Rapid Prototyping of
+                                    Clinical Text Extraction</h3>
+                                <p>Implemented and benchmarked a CPU-only LLM pipeline (TinyLlama, Mistral)
+                                    for clinical text extraction. Evaluated latency, accuracy, and scalability
+                                    under resource constraints. Produced deployment recommendations around
+                                    privacy, feasibility, and real-world adoption.</p>
+                                <div class="project-tags">
+                                    <span class="tag">LLMs</span>
+                                    <span class="tag">NLP</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Model Evaluation</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- PROJECT 3: DIABETES SQL DATABASE -->
+                    <a href="project3.html" class="project-card-link">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img src="project3.png" alt="Diabetes Database Design" loading="lazy">
+                            </div>
+                            <div class="project-info">
+                                <h3>DiaHealth: Diabetes Care Relational Database</h3>
+                                <p>Designed a FHIR-aligned SQL database integrating longitudinal clinical data
+                                    to support diabetes cohort analysis. Built dbt pipelines, implemented HIPAA-aligned
+                                    controls, and enabled structured insights across labs, vitals, visits, and care
+                                    plans.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">Database Design</span>
+                                    <span class="tag">FHIR</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+
+                <div class="about-content">
+                    <!-- LEFT COLUMN: Bio & Skills -->
+                    <div class="about-left-column">
+                        <div class="about-text">
+                            <p>I believe that improving healthcare outcomes goes beyond bedside care, it's about
+                                operational
+                                efficiencies, reliable
+                                documentation, and leveraging data-driven effective strategies.
+                                My work focuses on bridging clinical workflows with data-driven transformation to
+                                support
+                                better outcomes, operational efficiency, and AI readiness in healthcare.</p>
+
+                            <p>I enjoy solving problems at the intersection of clinical understanding and data based
+                                optimizations, whether that means building pipelines, validating outputs, or
+                                deriving insights.</p>
+                        </div>
+
+                        <div class="skills">
+                            <h3>Technical Skills</h3>
+                            <div class="skills-list">
+                                <span class="skill-item">SQL</span>
+                                <span class="skill-item">SAS</span>
+                                <span class="skill-item">Power BI</span>
+                                <span class="skill-item">FHIR & HL7 standards</span>
+                                <span class="skill-item">Clinical NLP</span>
+                                <span class="skill-item">Azure Cloud fundamentals</span>
+                                <span class="skill-item">Python</span>
+                            </div>
+                        </div>
+
+                        <div class="certifications">
+                            <h3>Certifications</h3>
+                            <ul class="cert-list">
+                                <li><a href="https://learn.microsoft.com/api/credentials/share/en-us/AlekhyaVellanki-2985/D19D63D9BEDF5CD1?sharingId=ED60D8E04B9E1899"
+                                        target="_blank">Microsoft
+                                        Certified: Azure Fundamentals (AZ-900)</a></li>
+                                <li><a href="https://coursera.org/share/82448ad3eb3192e7caf507bc53c786b7"
+                                        target="_blank">SQL for Data
+                                        Science (UC Davis / Coursera)</a></li>
+                                <li>CITI Program – Biomedical Research Certifications
+                                    <ul style="list-style: disc;">
+                                        <li><a href="https://www.citiprogram.org/verify/?w3c0dfe7c-2fe4-4f39-968f-316768a037d6-69909620"
+                                                target="_blank">Human Research -
+                                                Data or Specimens Only Research (ID 43007)</a></li>
+                                        <li><a href="https://www.citiprogram.org/verify/?w5187e2a4-40bd-4dfa-88bb-3c3d174d587f-58856494"
+                                                target="_blank">Responsible Conduct
+                                                of Research (ID 288245)</a></li>
+                                        <li><a href="https://www.citiprogram.org/verify/?wed768c91-cf18-4293-b794-db995ec103a0-58856493"
+                                                target="_blank">Good
+                                                Clinical Practice (U.S. FDA Focus) (ID 110920)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Experience Timeline -->
+                    <div class="experience-timeline">
+                        <h3>Professional Experience</h3>
+
+                        <div class="timeline">
+                            <!-- Item 1 -->
+                            <div class="timeline-item">
+                                <div class="timeline-date">March 2024 - September 2024</div>
+                                <div class="timeline-content">
+                                    <h4>Clinical Data Analyst</h4>
+                                    <a href="https://health.ucdavis.edu/CoLab/" target="_blank" class="company">UC Davis
+                                        Health</a>
+                                    <p>Lead data integration projects for clinical NLP pipelines and developing Power
+                                        BI dashboards for stakeholder reporting. Improved data quality and analytical
+                                        workflows.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="timeline-item">
+                                <div class="timeline-date">April 2022 - April 2023</div>
+                                <div class="timeline-content">
+                                    <h4>Data Analyst Intern (Part-time)</h4>
+                                    <a href="https://www.aidiahealth.com/" target="_blank" class="company">AIDIA
+                                        Health</a>
+                                    <p>Analyzed device logs of patented dental device to evaluate clinical performance,
+                                        identifying recurring usability issues that
+                                        contributed to design updates.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="timeline-item">
+                                <div class="timeline-date">April 2022 - April 2023</div>
+                                <div class="timeline-content">
+                                    <h4>Resident Dental Practitioner and Informatics Assistant</h4>
+                                    <a href="https://mrids.edu.in/" target="_blank" class="company">Malla Reddy Dental
+                                        Hospital</a>
+                                    <p>Managed clinical workflows, tratment planning and was involved in the hospital
+                                        wide transition into electronic health record system..</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Let's Connect!</h2>
+                    <p>I’m open to data analyst, health informaticist, clinical systems specialist opportunities.</p>
+
+                    <div class="contact-buttons">
+                        <a href="mailto:avellanki@ucdavis.edu" class="contact-icon-button" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alekhya-vellanki/" target="_blank"
+                            class="contact-icon-button" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Alekhya Vellanki. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
